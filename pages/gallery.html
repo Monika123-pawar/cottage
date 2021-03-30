@@ -26,12 +26,12 @@
 
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="../index.html">HOME</a>
-                <a href="../pages/gallery.html">GALLERY</a>
-                <a href="../pages/accomodation.html">ACCOMMODATION</a>
+                <a href="../index.html">Home</a>
+                <a href="../pages/gallery.html">Gallery</a>
+                <a href="../pages/accomodation.html">Accomodation</a>
                 <a href="../pages/nearByPlaces.html">Near By Places</a>
                 <a href="../pages/blog.html">Blog</a>
-                <a href="../pages/contactUs.html">CONTACT US</a>
+                <a href="../pages/contactUs.html">Contact Us</a>
                 <div class="d-flex">
                     <a href="#"><i class="fa fa-facebook-square"></i></a>
                     <a href="#"><i class="fa fa-instagram"></i></a>
@@ -65,29 +65,38 @@
             </div>
         </div>
     </section>
+   
     <footer>
         <div class="container-fluid footer p-5">
             <div class="row">
                 <div class="col">
-                    <div class="row">
+                    <div class="row bg-white p-3" data-aos="flip-up">
                         <h1 class="text-center contact-text-main">
                             Enquiry Form
                         </h1>
-                        <form method="POST" action="" class="contactForm">
-                            <div class="col mt-5 mb-5">
-                                <input type="text" class="form-control" id="name" placeholder="Your Name*" required>
+
+                        <form id="form" class="form">
+                            <div class="form-control ">
+                                <label for="username">Username</label>
+                                <input type="text" placeholder="Your Name*" id="username2" />
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
                             </div>
-                            <div class="col mt-5 mb-5">
-                                <input type="email" class="form-control" id="email"
-                                    placeholder="Your Email Address*" required>
+                            <div class="form-control">
+                                <label for="username">Email</label>
+                                <input type="email" placeholder="Your Email Address*" id="email2" />
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
                             </div>
-                            <div class="col mt-5 mb-5">
+                            <div class="form-control">
+
                                 <textarea type="text" class="form-control" id="message" placeholder="Message*"
                                     required></textarea>
                             </div>
-                            <div class="col mt-5 mb-5">
-                                <button type="submit" class="btn contact-btn" onclick="">SUBMIT</button>
-                            </div>
+
+                            <button class="enquiry-btn" onclick="checkInputs2()">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -105,12 +114,15 @@
                         <div class="col text-center ">
                             <h3 class="footer-contact">Contact</h3>
                             <p class="footer-contact-text"><i class="fa fa-envelope m-2 "></i><a
-                                class="footer-contact-text-link text-white text-decoration-none" href="mailto: naikgayatri29@gmail.com">naikgayatri29@gmail.com</a>
+                                    class="footer-contact-text-link text-white text-decoration-none"
+                                    href="mailto: naikgayatri29@gmail.com">naikgayatri29@gmail.com</a>
                             </p>
-                            <p class="footer-contact-text"><i class="fa fa-phone m-2"></i> <a  class="footer-contact-text-link text-white text-decoration-none"
+                            <p class="footer-contact-text"><i class="fa fa-phone m-2"></i> <a
+                                    class="footer-contact-text-link text-white text-decoration-none"
                                     href="tel:+7045818131">7045818131</a>
 
-                            <div class="d-flex footer-contact-text justify-content-center   footer-social-media text-center">
+                            <div
+                                class="d-flex footer-contact-text justify-content-center   footer-social-media text-center">
                                 <a href=" # "><i class=" fa fa-facebook-square "></i></a>
                                 <a href=" #"><i class="fa fa-instagram"></i></a>
                             </div>
@@ -119,17 +131,16 @@
                 </div>
 
                 <div class="col text-center"><a href="#"><img src="../assets/images/shree-gurukrupa-cottage-LOGO.png"
-                            alt="" srcset="" class="logo-footer"></a></div>
+                    alt="" srcset="" class="logo-footer"></a></div>
             </div>
-            <div class="row copyright">
+            <div class="row copyright mt-5">
                 <div class="col text-center p-1 copyright">
-                    <h5>This website designed and develop by <span><a href="www.webemps.com">WebEmps.com</a></span>
+                    <h5>This website designed and develop by <span><a target="_blank" href="http://www.webemps.com/">WebEmps.com</a></span>
                     </h5>
                 </div>
             </div>
         </div>
     </footer>
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
