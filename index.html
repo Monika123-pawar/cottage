@@ -25,6 +25,7 @@
     <!-- <img style="width: 300px;height: 300px;" src="./assets/images/travel-concept-with-world-map-toy-van.jpg" loading="lazy" alt="" srcset=""> -->
 
     <header>
+
         <a href="#Banner" onclick="toTop()" id="toTop" title="Go to top">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                 focusable="false" width="2em" height="2em"
@@ -36,8 +37,9 @@
                 </g>
             </svg> </a>
 
-        <section id="Banner" loading="lazy" class="banner " onload="weatherAnimation();">
-
+        <section id="Banner" loading="lazy" class="lazyload lazy banner " onload="weatherAnimation();">
+            <!-- <img class="lazyload" data-src="./assets/images/travel-concept-with-world-map-toy-van.jpg"  /> -->
+            <!-- <img src="./assets/images/travel-concept-with-world-map-toy-van.jpg" class="lazy" alt="" srcset=""> -->
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="#">Home</a>
@@ -59,7 +61,48 @@
 
             <div class="col text-center logo-main" data-tilt><a href="#"><img
                         src="assets/images/shree-gurukrupa-cottage-LOGO.png" alt="" srcset="" class="logo"></a></div>
-            <div class="rain"></div>
+            <!-- <div class="rain"></div> -->
+            <canvas id="canvas"></canvas>
+            <canvas id="snow-flake-app">
+              
+            </canvas>
+            <div class="snowmanmain">
+            <div class="back"></div>
+            <div class="snow snow-flake1"></div>
+            <div class="snow snow-flake2"></div>
+            <div class="snow snow-flake3"></div>
+            <div class="snow snow-flake4"></div>
+            <div class="snow snow-flake5"></div>
+            <div class="snow snow-flake6"></div>
+            <div class="snow snow-flake7"></div>
+            <div class="snow snow-flake8"></div>
+            <div class="snow snow-flake9"></div>
+            <div class="snow snow-flake10"></div>
+            <div class="snow snow-flake11"></div>
+            <div class="snow snow-flake12"></div>
+            <div class="snow snow-flake13"></div>
+            <div class="snow snow-flake14"></div>
+            <div class="snow snow-flake15"></div>
+            <div class="snow-piles snow-pile1"></div>
+            <div class="snow-piles snow-pile2"></div>
+            <div class="snow-piles snow-pile3"></div>
+            <div class="snowman">
+                <div class="head">
+                    <div class="eyes left-eye"></div>
+                    <div class="eyes right-eye"></div>
+                    <div class="nose"></div>
+                </div>
+                <div class="hands left-hand"></div>
+                <div class="hands right-hand"></div>
+                <div class="snowmanbody">
+                    <div class="buttons top-button"></div>
+                    <div class="buttons middle-button"></div>
+                    <div class="buttons bottom-button"></div>
+                    <!-- <div class="hands left-hand"></div>
+                    <div class="hands right-hand"></div> -->
+                </div>
+            </div>
+            </div>
             <!--  <span class="sun"></span>
             <span class="moon"></span> -->
             <section class="animationSection">
@@ -128,10 +171,8 @@
                         data-aos="flip-left">
                         <img src="assets/images/bg1.jpg" style="width:100%" class="hover-shadow cursor" loading="lazy">
                         <div class="content-details fadeIn-top ">
-                            <h6 class="pt-3">This is a title</h6>
-                            <p class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptas et
-                                tempora numquam obcaecati distinctio at eos praesentium quibusdam, inventore neque
-                                suscipit provident molestias tenetur reiciendis illo nemo earum autem.</p>
+                            <h6 class="pt-3">Front View</h6>
+                            <p class="p-2">This is front view of cottage.It has 7 rooms with the accommodation capacity of 2 people in each room.</p>
                         </div>
                     </div>
                     <div class="col-sm-11 col-md-6 col-lg-3 p-4  content" onclick="openModal();currentSlide(1)"
@@ -139,10 +180,8 @@
 
                         <img src="assets/images/g1.jpg" style="width:100%" class="hover-shadow cursor" loading="lazy">
                         <div class="content-details fadeIn-top ">
-                            <h6 class="pt-3">This is a title</h6>
-                            <p class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptas et
-                                tempora numquam obcaecati distinctio at eos praesentium quibusdam, inventore neque
-                                suscipit provident molestias tenetur reiciendis illo nemo earum autem.</p>
+                            <h6 class="pt-3">Garden View</h6>
+                            <p class="p-2">Children Play ground near cottage.Available for birthday celebration </p>
                         </div>
                     </div>
                     <div class="col-sm-11 col-md-6 col-lg-3 p-4  content" onclick="openModal();currentSlide(1)"
@@ -150,10 +189,8 @@
 
                         <img src="assets/images/bg1.jpg" style="width:100%" class="hover-shadow cursor" loading="lazy">
                         <div class="content-details fadeIn-top ">
-                            <h6 class="pt-3">This is a title</h6>
-                            <p class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptas et
-                                tempora numquam obcaecati distinctio at eos praesentium quibusdam, inventore neque
-                                suscipit provident molestias tenetur reiciendis illo nemo earum autem.</p>
+                            <h6 class="pt-3">Single Bed Room</h6>
+                            <p class="p-2">Single Bed Room with premium facilities with clean bathroom.</p>
                         </div>
                     </div>
                     <div class="col-sm-11 col-md-6 col-lg-3 p-4  content" onclick="openModal();currentSlide(1)"
@@ -161,10 +198,8 @@
 
                         <img src="assets/images/g3.jpg" style="width:100%" class="hover-shadow cursor" loading="lazy">
                         <div class="content-details fadeIn-top ">
-                            <h6 class="pt-3">This is a title</h6>
-                            <p class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptas et
-                                tempora numquam obcaecati distinctio at eos praesentium quibusdam, inventore neque
-                                suscipit provident molestias tenetur reiciendis illo nemo earum autem.</p>
+                            <h6 class="pt-3">Double Bed Room</h6>
+                            <p class="p-2">Double Bed Room with premium facilities with clean bathroom.</p>
                         </div>
                     </div>
                 </div>
@@ -173,10 +208,8 @@
                         data-aos="flip-left">
                         <img src="assets/images/bg1.jpg" style="width:100%" class="hover-shadow cursor" loading="lazy">
                         <div class="content-details fadeIn-top ">
-                            <h6 class="pt-3">This is a title</h6>
-                            <p class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptas et
-                                tempora numquam obcaecati distinctio at eos praesentium quibusdam, inventore neque
-                                suscipit provident molestias tenetur reiciendis illo nemo earum autem.</p>
+                            <h6 class="pt-3">Parking Area</h6>
+                            <p class="p-2">We have free parking area for all type of vehicles.No registration is required.</p>
                         </div>
                     </div>
                     <div class="col-sm-11 col-md-6 col-lg-3 p-4  content" onclick="openModal();currentSlide(1)"
@@ -184,10 +217,8 @@
 
                         <img src="assets/images/g1.jpg" style="width:100%" class="hover-shadow cursor" loading="lazy">
                         <div class="content-details fadeIn-top ">
-                            <h6 class="pt-3">This is a title</h6>
-                            <p class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptas et
-                                tempora numquam obcaecati distinctio at eos praesentium quibusdam, inventore neque
-                                suscipit provident molestias tenetur reiciendis illo nemo earum autem.</p>
+                            <h6 class="pt-3">Food</h6>
+                            <p class="p-2">We Provide sublime food for all type of veg/Non veg categories.</p>
                         </div>
                     </div>
                     <div class="col-sm-11 col-md-6 col-lg-3 p-4  content" onclick="openModal();currentSlide(1)"
@@ -195,10 +226,8 @@
 
                         <img src="assets/images/bg1.jpg" style="width:100%" class="hover-shadow cursor" loading="lazy">
                         <div class="content-details fadeIn-top ">
-                            <h6 class="pt-3">This is a title</h6>
-                            <p class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptas et
-                                tempora numquam obcaecati distinctio at eos praesentium quibusdam, inventore neque
-                                suscipit provident molestias tenetur reiciendis illo nemo earum autem.</p>
+                            <h6 class="pt-3">Dining Room</h6>
+                            <p class="p-2">Large dining room for 10-15 people at a time. </p>
                         </div>
                     </div>
                     <div class="col-sm-11 col-md-6 col-lg-3 p-4  content" onclick="openModal();currentSlide(1)"
@@ -206,10 +235,8 @@
 
                         <img src="assets/images/g3.jpg" style="width:100%" class="hover-shadow cursor" loading="lazy">
                         <div class="content-details fadeIn-top ">
-                            <h6 class="pt-3">This is a title</h6>
-                            <p class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptas et
-                                tempora numquam obcaecati distinctio at eos praesentium quibusdam, inventore neque
-                                suscipit provident molestias tenetur reiciendis illo nemo earum autem.</p>
+                            <h6 class="pt-3">Facilities</h6>
+                            <p class="p-2">We have clean room with premiun room, bathroom, parking facilties.</p>
                         </div>
                     </div>
                 </div>
@@ -243,7 +270,7 @@
 
             </div>
         </section>
-        <section class="video-section bg-dark">
+        <section class="video-section ">
             <div class="container-fluid ">
                 <div class="row   ">
                     <div class="embed-responsive embed-responsive-16by9">
@@ -258,7 +285,7 @@
             <div class="container-fluid p-1">
                 <span id="myElement"></span>
                 <div class="col-12 text-center services-text-main">
-                    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit</h1>
+                    <h1>FACILITIES</h1>
                 </div>
                 <div class="container-fluid p-lg-2">
                     <div class="container  service-box-main  ">
@@ -275,15 +302,7 @@
                                         d="M464 128h-80V80c0-26.5-21.5-48-48-48H176c-26.5 0-48 21.5-48 48v48H48c-26.5 0-48 21.5-48 48v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V176c0-26.5-21.5-48-48-48zM192 96h128v32H192V96zm160 248c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48z"
                                         fill="#626262" />
                                 </svg>
-                                <p class="text-justify services-text p-3">Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing
-                                    elitLorem ipsum,
-                                    dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing elit. Adipisci provident consectetur harum ad corporis, iure est ab
-                                    porro
-                                    dolore nobis magni ipsam repellendus quis consequuntur, facere recusandae,
-                                    reiciendis
-                                    quasi reprehenderit.</p>
+                                <p class="text-justify services-text p-3">First aid kit box available. Medicals are avialable near by cottage for emergency suituation.</p>
                             </div>
                             <div class="col-sm-9 col-md-11 col-lg-3 text-center p-2 m-lg-2  service-box"
                                 data-aos="flip-right">
@@ -297,15 +316,7 @@
                                         d="M560 64c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16H16C7.16 0 0 7.16 0 16v32c0 8.84 7.16 16 16 16h15.98v384H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h240v-80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v80h240c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16h-16V64h16zm-304 44.8c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4zm0 96c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4zm-128-96c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4zM179.2 256h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8zM192 384c0-53.02 42.98-96 96-96s96 42.98 96 96H192zm256-140.8c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4zm0-96c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4z"
                                         fill="#626262" />
                                 </svg>
-                                <p class="text-justify services-text p-3">Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing
-                                    elitLorem ipsum,
-                                    dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing elit. Adipisci provident consectetur harum ad corporis, iure est ab
-                                    porro
-                                    dolore nobis magni ipsam repellendus quis consequuntur, facere recusandae,
-                                    reiciendis
-                                    quasi reprehenderit.</p>
+                                <p class="text-justify services-text p-3">Excellent Lodging facility has been provided for the tourists. We have clean A/C and Non A/C Rooms.</p>
                             </div>
                             <div class="col-sm-9 col-md-11 col-lg-3 text-center p-2 m-lg-2  service-box"
                                 data-aos="flip-right">
@@ -322,15 +333,7 @@
                                             d="M13.229 8.271c.216-.216.194-.578-.063-.745A9.456 9.456 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745a.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.577 1.336c.205.132.48.108.652-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.472 6.472 0 0 0 8 9c-1.06 0-2.062.254-2.946.704c-.285.145-.326.524-.1.75l.015.015c.16.16.408.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56c.203.1.45.07.611-.091l.015-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .708 0l.707-.707z" />
                                     </g>
                                 </svg>
-                                <p class="text-justify services-text p-3">Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing
-                                    elitLorem ipsum,
-                                    dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing elit. Adipisci provident consectetur harum ad corporis, iure est ab
-                                    porro
-                                    dolore nobis magni ipsam repellendus quis consequuntur, facere recusandae,
-                                    reiciendis
-                                    quasi reprehenderit.</p>
+                                <p class="text-justify services-text p-3">Free wifi available on the Scottage surrounding.</p>
                             </div>
 
                         </div>
@@ -338,26 +341,8 @@
                             <div class="col-sm-9 col-md-11 col-lg-3 text-center p-2 m-lg-2  service-box"
                                 data-aos="flip-right">
 
-                                <svg class="m-3" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false"
-                                    width="3em" height="3em"
-                                    style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
-                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                    <g fill="none">
-                                        <path
-                                            d="M10.75 6H17a3 3 0 0 1 2.995 2.824L20 9v1l1 .018a1 1 0 0 1 .993.879l.008.12v2a1 1 0 0 1-.866.992l-.134.009L20 14v1a3 3 0 0 1-2.824 2.995L17 18H7.995a.75.75 0 0 1-.743-.648l-.007-.102v-4.5a.75.75 0 0 1 .649-.743L7.995 12h.628c.716 0 1.304-.546 1.37-1.245l.007-.132V6.75a.75.75 0 0 1 .648-.743L10.75 6H17h-6.25zM6.645 4.007L6.747 4a.75.75 0 0 1 .743.648l.007.102L7.496 6h.758a.75.75 0 0 1 .75.75v2.499a1.75 1.75 0 0 1-1.75 1.75l-1.003-.001v6.245a.75.75 0 0 1-.647.743l-.102.007a.75.75 0 0 1-.743-.648l-.007-.102v-6.245H3.75A1.75 1.75 0 0 1 2 9.249V6.75A.75.75 0 0 1 2.75 6h.751V4.75a.75.75 0 0 1 .648-.743L4.251 4a.75.75 0 0 1 .743.648l.007.102V6h.995V4.75a.75.75 0 0 1 .65-.743l.1-.007l-.1.007z"
-                                            fill="#626262" />
-                                    </g>
-                                </svg>
-                                <p class="text-justify services-text p-3">Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing
-                                    elitLorem ipsum,
-                                    dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing elit. Adipisci provident consectetur harum ad corporis, iure est ab
-                                    porro
-                                    dolore nobis magni ipsam repellendus quis consequuntur, facere recusandae,
-                                    reiciendis
-                                    quasi reprehenderit.</p>
+                                <svg  class="m-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false"  width="3em" height="3em"style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 50 50"><path d="M7.206 31.141c2.885 0 5.219-2.399 5.219-5.368c0-2.953-2.334-5.353-5.219-5.353C4.333 20.42 2 22.82 2 25.773c0 2.968 2.333 5.368 5.206 5.368zm29.23 9.216a.53.53 0 0 1 .741.117l.965 1.372a.578.578 0 0 1-.116.766l-7.08 5.287a.536.536 0 0 1-.743-.118l-.962-1.372a.575.575 0 0 1 .116-.764l7.079-5.288zm-8.003-6.817l-2.808-5.063l-1.474 1.107l2.808 5.09zm-6.551-11.827L10.962 2l-2.089.014l11.522 20.82zm10.281 10.43C32.78 31.682 34.192 31 35 31h10c1.974 0 3 1.986 3 4.004C48 37.034 46.974 38 45 38h-9l-10.836 8.502c-3.808 2.819-6.116-.278-6.116-.278l-8.483-8.729c-1.423-1.753-1.115-5.089.591-6.566l11.739-8.597c1.166-1 2.897-.843 3.885.343c.976 1.2.822 2.994-.346 3.996l-7.515 5.657l5.399 5.484l7.845-5.669z" fill="#626262"/></svg>
+                                <p class="text-justify services-text p-3">Playground available for children.</p>
                             </div>
                             <div class="col-sm-9 col-md-11 col-lg-3 text-center p-2 m-lg-2  service-box"
                                 data-aos="flip-right">
@@ -374,15 +359,7 @@
                                         d="M499.59 221.75c-5.85-9.88-16.54-24.9-34.19-40.28a209.82 209.82 0 0 0-62-37L392.23 164a183.22 183.22 0 0 0-.09 183.87l11.75 19.57a209.26 209.26 0 0 0 61.42-36.49C497.05 303.47 512 269 512 256c0-12.31-8-26.74-12.41-34.25zM416 256a16 16 0 1 1 16-16a16 16 0 0 1-16 16z"
                                         fill="#626262" />
                                 </svg>
-                                <p class="text-justify services-text p-3">Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing
-                                    elitLorem ipsum,
-                                    dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing elit. Adipisci provident consectetur harum ad corporis, iure est ab
-                                    porro
-                                    dolore nobis magni ipsam repellendus quis consequuntur, facere recusandae,
-                                    reiciendis
-                                    quasi reprehenderit.</p>
+                                <p class="text-justify services-text p-3">Alibaug is famous for sea-food. We provide freshly caught and cooked fish.</p>
                             </div>
                             <div class="col-sm-9 col-md-11 col-lg-3 text-center p-2 m-lg-2  service-box"
                                 data-aos="flip-right">
@@ -396,15 +373,7 @@
                                         d="M12 3c-5 0-9 4-9 9s4 9 9 9s9-4 9-9s-4-9-9-9m0 16c-3.9 0-7-3.1-7-7s3.1-7 7-7s7 3.1 7 7s-3.1 7-7 7m8.5 1.5c2.2-2.2 3.5-5.2 3.5-8.5s-1.3-6.3-3.5-8.5l-1.1 1.1c1.9 1.9 3.1 4.5 3.1 7.4c0 2.9-1.2 5.5-3.1 7.4l1.1 1.1M4.6 19.4c-1.9-1.9-3.1-4.5-3.1-7.4c0-2.9 1.2-5.5 3.1-7.4L3.5 3.5C1.3 5.7 0 8.7 0 12s1.3 6.3 3.5 8.5l1.1-1.1M9.5 7v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-4m2 2h2v2h-2V9z"
                                         fill="#626262" />
                                 </svg>
-                                <p class="text-justify services-text p-3">Lorem ipsum, dolor sit amet consectetur
-                                    adipisicing
-                                    elitLorem ipsum,
-                                    dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur
-                                    adipisicing elit. Adipisci provident consectetur harum ad corporis, iure est ab
-                                    porro
-                                    dolore nobis magni ipsam repellendus quis consequuntur, facere recusandae,
-                                    reiciendis
-                                    quasi reprehenderit.</p>
+                                <p class="text-justify services-text p-3">Free parking  is available in cottage for all types vehicles.</p>
                             </div>
 
                         </div>
@@ -468,103 +437,36 @@
             </div>
         </section>
 
-        <!-- <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col p-lg-5">
-                        <iframe class="map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.360208991932!2d72.9029278!3d18.6028613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be871363700bed1%3A0x777af0f304f46f54!2sShree%20Gurukrupa%20Cottage!5e0!3m2!1sen!2sin!4v1613711052260!5m2!1sen!2sin"
-                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <div class="col col-sm-12 col-md-12 col-lg-6 formSection">
-                        <div class="row" data-aos="flip-up">
-
-                            <div class="contact-container">
-                                <h2>Feel free to get in touch.</h2>
-                                <ul class="actions">
-                                  <li><a href="#" id="contact" class="button big">Contact Us</a></li>
-                                </ul>
-                              </div>
-                    
-                              <div class="cd-popup contact" role="alert">
-                                <form name="contactform" id="contactform" class="contact-form">
-                                  <div class="cd-popup-container" style="">
-                                    <p style="">
-                                      <a href="" class="cd-popup-close cd-close-button">
-                                        <i class="fa fa-times" style="pointer-events:none;"></i>
-                                      </a>
-                                    </p>
-                    
-                                    <div class="name">
-                                      <label for="name">Name</label>
-                                      <input type="text" id="name" name="name" />
-                                    </div>
-                                    <div class="email">
-                                      <label for="email">Email</label>
-                                      <input type="text" id="email" name="email" />
-                                    </div>
-                                    <div class="phone">
-                                        <label for="phone">Phone</label>
-                                        <input type="tel" id="phone" name="phone" />
-                                      </div>
-                                    <div class="message">
-                                      <label for="message">Message</label>
-                                      <textarea name="message" id="message" name="message"></textarea>
-                                    </div>
-                                    <br>
-                                  
-                                    <br>
-                                    <input type="submit" name="submit" id="submit" value="Send" />
-                                  </div>
-                                </form>
-                              </div>
-                    
-                              <div class="cd-popup notification" role="alert">
-                                <div class="cd-popup-container">
-                                  <a href="" class="cd-popup-close cd-close-button"><i class="fa fa-times"
-                                      style="pointer-events:none;"></i></a>
-                                  <p>
-                                  <h3 id="notification-text">Thanks for getting in touch!</h3>
-                                  </p>
-                                </div>
-                              </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
         <section>
             <div class="container-fluid p-5">
                 <div class="row ">
                     <div class="col p-lg-2">
-                        <iframe class="map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.360208991932!2d72.9029278!3d18.6028613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be871363700bed1%3A0x777af0f304f46f54!2sShree%20Gurukrupa%20Cottage!5e0!3m2!1sen!2sin!4v1613711052260!5m2!1sen!2sin"
-                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                       
+                            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d943.134747382053!2d73.12095652918586!3d18.995956799195888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e8431fd4c33d%3A0x24ab106b18428aea!2s10%2C%20Rd%20Number%209%2C%20Sector%2019%2C%20New%20Panvel%20East%2C%20Panvel%2C%20Navi%20Mumbai%2C%20Maharashtra%20410206!5e0!3m2!1sen!2sin!4v1617628046554!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                     <div class="col formSection">
-                        <div class="row bg-white p-lg-2 p-1 " data-aos="flip-up">
+                        <div class="row bg-white p-lg-2 p-1 formbg" data-aos="flip-up">
                             <h1 class="text-center contactDetails-text-main contact-text-main contact-text-main1">
                                 CONTACT US
                             </h1>
                             <form id="form" class="form contactForm" onsubmit="return false">
                                 <div class="form-control col-sm-12 col-md-5 col-lg-5 ">
-                                    <label for="username">Username</label>
-                                    <input type="text" placeholder="Your Name*" id="username" />
+                                    <label for="username">Nme</label>
+                                    <input type="text" placeholder="Name*" id="username" />
                                     <i class="fa fa-check-circle"></i>
                                     <i class="fa fa-exclamation-circle"></i>
                                     <small>Error message</small>
                                 </div>
                                 <div class="form-control col-sm-12 col-md-5 col-lg-5">
                                     <label for="username">Email</label>
-                                    <input type="email" placeholder="Your Email Address*" id="email" />
+                                    <input type="email" placeholder="Email*" id="email" />
                                     <i class="fa fa-check-circle"></i>
                                     <i class="fa fa-exclamation-circle"></i>
                                     <small>Error message</small>
                                 </div>
                                 <div class="form-control  col-sm-12 col-md-5 col-lg-5">
                                     <label for="username">Phone Number</label>
-                                    <input type="tel" placeholder="Your Phone Number*" id="phoneNumber"
+                                    <input type="tel" placeholder="Phone Number*" id="phoneNumber"
                                         pattern="[7-9]{1}[0-9]{9}" required />
                                     <i class="fa fa-check-circle"></i>
                                     <i class="fa fa-exclamation-circle"></i>
@@ -620,15 +522,15 @@
 
                         <form id="form" class="form enquiryForm" onsubmit="return false">
                             <div class="form-control ">
-                                <label for="username">Username</label>
-                                <input type="text" placeholder="Your Name*" id="username2" />
+                                <label for="username">Name</label>
+                                <input type="text" placeholder="Name*" id="username2" />
                                 <i class="fa fa-check-circle"></i>
                                 <i class="fa fa-exclamation-circle"></i>
                                 <small>Error message</small>
                             </div>
                             <div class="form-control">
                                 <label for="username">Email</label>
-                                <input type="email" placeholder="Your Email Address*" id="email2" />
+                                <input type="email" placeholder="Email*" id="email2" />
                                 <i class="fa fa-check-circle"></i>
                                 <i class="fa fa-exclamation-circle"></i>
                                 <small>Error message</small>
@@ -719,12 +621,12 @@
             strings: "A cottage placed near Nagoan Beach near Alibag, It has 7 rooms with the accommodation capacity of 2 people in each room. Each room comes with a twin-bed and premium facilities."
         }).go();
         $(document).ready(function () {
-            window.onload = function raining() {
-                setTimeout(function () {
-                    $(".rain").hide();
-                    $(".animationSection").css('display', 'block');
-                }, 1000);
-            }
+            // window.onload = function raining() {
+            //     setTimeout(function () {
+            //         $(".rain").hide();
+            //         $(".animationSection").css('display', 'block');
+            //     }, 1000);
+            // }
 
             $(".contactbtn").click(function () {
                 if (checkInputs()) {
@@ -770,15 +672,253 @@
     <script> AOS.init({ duration: 2000, });</script>
     <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 
-    
+
     <!-- cdnjs -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
-          <script>
-               $(function() {
-        $('.lazy').Lazy();
-    });
-          </script>
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+    <script type="text/javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+    <script>
+        $('img.lazy').lazyload({
+            effect: "fadeIn"
+        });
+        $("img.lazyload").lazyload();
+
+
+
+
+        function id(el) {
+            return document.getElementById(el);
+        }
+
+        var raincanvas = id('canvas');
+        var c = raincanvas.getContext('2d');
+
+        var screen = {
+            width: 1536,
+            height: 722
+        }
+        raincanvas.width = screen.width;
+        raincanvas.height = screen.height;
+        var colors = ['white'];
+
+        function Rain(x, y, w, h, fall_speed, color) {
+            this.w = w;
+            this.h = h;
+            this.x = x;
+            this.y = y;
+            this.fall_speed = fall_speed;
+            this.color = color;
+            this.draw = function () {
+                c.fillStyle = this.color;
+                c.fillRect(this.x, this.y, this.w, this.h);
+
+            }
+            this.update = function () {
+                // this.x += this.dx;
+                this.y += this.fall_speed;
+
+                if (this.y >= screen.height) {
+                    this.y = -this.h;
+                    this.x = Math.floor(Math.random() * screen.width);
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                }
+                // this.y = screen.floor - this.h;
+
+                this.draw();
+
+            }
+
+        }
+
+
+        var w = 1;
+        var h = 100;
+        var fall_speed = 30;
+        var rains = [
+
+        ];
+
+        for (var i = 0; i < 30; i++) {
+            var x = Math.floor(Math.random() * screen.width);
+            var y = Math.floor(Math.random() * screen.height);
+            rains.push(new Rain(x, y, w, h, fall_speed, colors[Math.floor(Math.random() * colors.length)]));
+        }
+        var lastFrame = 0;
+
+        function render(time) {
+            var FPS = Math.floor(1000 / (time - lastFrame));
+            lastFrame = time;
+
+            requestAnimationFrame(render);
+            c.clearRect(0, 0, screen.width, screen.height);
+            c.font = '20px Verdana';
+            c.fillStyle = 'white';
+            c.fillText(FPS + ' FPS', 10, 50);
+            for (var i = 0; i < rains.length; i++) {
+                rains[i].update();
+            }
+        }
+        render();
+        // snow effect
+        (function(){
+    window.animation_config = window.animation_config || {
+        generatorDelay : { min: 1, max:20 },
+        isRunning : true,
+        speed : 1,
+        x_axis_rate : 0.1,
+        weight : 0.5,
+        size : 1.5,
+        z_axis_rate : 0.05,
+        color : {b : 255, a: 0.8},
+        wind : 0
+    };
+    window.animation_config.isRunning = true;
+    
+    let canvas = document.getElementById('snow-flake-app');
+    let ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const generatorDelay = { min: 1, max:1 };
+    let screenBounds = { lower: 0, upper: canvas.width};
+    
+    window.onfocus = function() {
+      //uncomment for performance
+      //window.animation_config.isRunning = true;
+    };
+    window.onblur = function() {
+      //uncomment for performance
+      //window.animation_config.isRunning = false;
+    };
+    
+    let particleArray = [];
+    
+    function randomInt(min = 0, max = 1){
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    function randomFloat(min = 0, max = 1){
+        return (Math.random() * (max - min)) + min;  //Math.random() * (max - min + 1) + min;
+    }
+    function randomColor(brightness, alpha){
+        return 'rgba(' + randomInt(brightness,255) + ',' + randomInt(brightness,255) + ',' + randomInt(brightness,255) + ',' + alpha + ')';
+    }
+    
+    class Particle{
+        constructor(pos, vector, z_index, size, color, weight){
+            this.pos = pos;
+            this.vector = vector;
+            this.z_index = z_index%5;
+            this.color = color;
+            this.size = size%50;
+            this.weight = weight%50;
+        }
+        
+        get displaySize(){
+            return Math.sqrt(this.z_index*this.size) * window.animation_config.size;
+        }
+        
+        draw(){
+            if(this.death || !(this.pos.x >= 0 && this.pos.x <= canvas.width )) return;
+            ctx.beginPath();
+            ctx.arc(this.pos.x, this.pos.y, this.displaySize, 0, Math.PI*2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+        }
+        
+        update(){
+            this.vector.z += randomFloat(-0.1,0.1);
+            this.z_index += this.vector.z * window.animation_config.z_axis_rate;
+            if(this.z_index <= 0) this.z_index = Math.abs(this.z_index);
+            if(this.pos.y > canvas.height - this.displaySize || !(this.pos.x >= screenBounds.lower && this.pos.x <= screenBounds.upper ) || this.displaySize <= 0){
+                this.death = true;
+                return;
+            }
+            
+            this.vector.x += (randomFloat(-0.3, 0.3) * this.z_index) * window.animation_config.x_axis_rate;
+            this.vector.y = Math.sqrt(this.weight * this.size * this.z_index) * window.animation_config.speed;
+            
+            
+            this.pos.x += this.vector.x + window.animation_config.wind;
+            this.pos.y += this.vector.y;
+        }
+    }
+    
+    function init(){
+        particleArray = [];
+        
+        function generateRandomParticle(){
+            if(window.animation_config.isRunning){
+                if(window.animation_config.wind > 0) {
+                    screenBounds.lower = (window.animation_config.wind * 200) * -1;
+                    screenBounds.upper = canvas.width;
+                }
+                else if(window.animation_config.wind < 0) {
+                    screenBounds.lower = 0;
+                    screenBounds.upper = canvas.width + (window.animation_config.wind * -200);
+                }
+                let pos = { x: randomInt(screenBounds.lower, screenBounds.upper), y: 0 };
+                let vector = { x: randomFloat(-0.3,0.3), y: randomFloat(-5,5), z: randomFloat(-0.1,0.1)};
+                let s = randomFloat(0.1,5);
+                let z = randomFloat(0.2,5);
+                let c = randomColor(window.animation_config.color.b, window.animation_config.color.a);
+                let w = window.animation_config.weight;
+                particleArray.push(new Particle(pos,vector,z,s,c,w));
+            }
+            setTimeout(generateRandomParticle, randomInt(window.animation_config.generatorDelay.min, window.animation_config.generatorDelay.max));
+        }
+        
+        
+        generateRandomParticle();
+    }
+    
+    function animate(){
+        
+        if(window.animation_config.isRunning){
+            ctx.clearRect(0,0, canvas.width, canvas.height);
+            particleArray = particleArray.filter(particle => !particle.death);
+            for(let i = 0; i < particleArray.length; i++){
+                particleArray[i].update();
+                particleArray[i].draw();
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+    
+    init();
+    animate();
+})();
+
+
+
+
+        // Month Animation
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        const d = new Date();
+        // var n=monthNames[d.getMonth()]; 
+        var n = monthNames[d.getMonth()];
+      
+        if (n === "June" || n === "July" || n === "August" || n === "September") {
+            $(".animationSection").hide();
+            $("#snow-flake-app").hide();
+            $(".snowmanmain").hide();
+            $("#canvas").show();
+        }
+        else if (n === 'October' || n === "November" || n === "December" || n === "January") {
+            $(".animationSection").hide();
+            $("#snow-flake-app").show();
+            $(".snowmanmain").show();
+            $("#canvas").hide();
+        }
+        else if(n === 'May' || n === "March" || n === "February" || n === "April"){
+            $(".animationSection").show();
+            $("#snow-flake-app").hide();
+            $(".snowmanmain").hide();
+            $("#canvas").hide();
+        }
+    </script>
 
 </body>
 

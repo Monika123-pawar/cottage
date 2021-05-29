@@ -12,18 +12,30 @@ body {
   /* width: 100%; */
   position: relative;
 }
-.banner.lazy {
-  /* background-image: none;
-  background-color: #F1F1FA; */
+/* .banner.lazy {
+ 
   background-image: filter(url("../images/travel-concept-with-world-map-toy-van.jpg"), blur(20px));
+} */
+header{
+  background:rgba(216, 204, 182, 0.741) ;
 }
+/* .banner  img{
+   width: 100%;
+  height: 50rem;
+  position: relative;
+  overflow: hidden;
+ 
+  background: linear-gradient(rgba(46, 36, 36, 0.3), rgb(75, 54, 54, 0.1));
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1;
+} */
 .banner {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 50rem;
   overflow: hidden;
-  /* background: rgb(75, 54, 54); */
   background: -webkit-linear-gradient(
       rgba(46, 36, 36, 0.8),
       rgb(75, 54, 54, 0.6)
@@ -87,7 +99,7 @@ transform: translate3d(-50%,-50%,100%) rotate(-150deg);
   z-index: 2;
 }
 #canvas1 {
-  margin-right: -6rem;
+  margin-right: -6rem ;
   padding: 1rem;
 }
 .cottage-desc {
@@ -96,7 +108,8 @@ transform: translate3d(-50%,-50%,100%) rotate(-150deg);
   padding: 1rem;
 }
 .typingtext {
-  background-color: white;
+  background-color: rgb(255, 255, 255) !important;
+  margin-left: 6rem;
   /* margin-right: -40rem; */
 }
 .description-text {
@@ -157,6 +170,7 @@ transform: translate3d(-50%,-50%,100%) rotate(-150deg);
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
+  background-color: rgb(175, 157, 157);
 }
 
 .content:hover .content-details {
@@ -179,7 +193,10 @@ transform: translate3d(-50%,-50%,100%) rotate(-150deg);
 .fadeIn-top {
   top: 20%;
 }
-
+.video-section{
+  background-color: #000;
+  margin-top: 5rem;
+}
 .video-bg {
   background-color: rgb(0, 0, 0);
 }
@@ -329,8 +346,8 @@ transform: translate3d(-50%,-50%,100%) rotate(-150deg);
   background-color: #37c3bc;
 }
 .enquiry-btn {
-  background-color: rgb(148, 142, 142) !important;
-  color: rgb(75, 54, 54) !important;
+  background-color:rgb(75, 54, 54) !important;
+  color: white !important;
 }
 .footer {
   background-color: rgb(75, 54, 54);
@@ -489,7 +506,7 @@ transform: translate3d(-50%,-50%,100%) rotate(-150deg);
   background-color: #37c3bc;
 }
 .accomodation-img-details {
-  padding-left: 12rem;
+  margin-left: 13rem !important;
 }
 .accomodation-text-details {
   color: rgb(75, 54, 54);
@@ -498,7 +515,7 @@ transform: translate3d(-50%,-50%,100%) rotate(-150deg);
 .accomodation-text2-details {
   color: rgb(75, 54, 54);
   font-size: larger;
-  font-weight: 400;
+  font-weight: 600;
 }
 .accomodation-text3-details {
   color: rgb(75, 54, 54);
@@ -516,7 +533,7 @@ transform: translate3d(-50%,-50%,100%) rotate(-150deg);
   font-weight: 600;
 }
 .map-contact {
-  width: 95%;
+  width: 100%;
   height: 20rem;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
@@ -531,7 +548,7 @@ transform: translate3d(-50%,-50%,100%) rotate(-150deg);
   background-size: cover;
   width: 100%;
   height: 100%;
-  border-radius: 3rem;
+  border-radius: 2rem;
 }
 .post-header {
   color: rgb(75, 54, 54);
@@ -804,6 +821,10 @@ img.hover-shadow {
     margin-left: 4rem;
     margin-top: -7rem;
   }
+  .typingtext {
+    margin-left:0rem !important;
+    /* margin-right: -40rem; */
+  }
   .cottage-desc {
     font-size: 20px;
     padding: 10px;
@@ -812,6 +833,10 @@ img.hover-shadow {
     height: 10rem;
     width: 15rem;
     margin-left: 20px;
+  }
+  .video-section{
+    
+    margin-top: 2rem;
   }
   .video {
     height: 10rem;
@@ -870,6 +895,7 @@ img.hover-shadow {
     padding-left: 0rem;
     padding: 1rem;
     width: 18rem;
+    margin-left: 1.2rem !important;
   }
   .services-text-main {
     padding: 1rem;
@@ -921,11 +947,15 @@ img.hover-shadow {
   }
   .formSection {
     margin-bottom: 0px !important;
+    
   }
   .form {
     margin-bottom: 40px !important;
     margin-top: 60px;
   }
+  /* .size{
+   padding-left: 1rem;
+  } */
 }
 /* tablet devices */
 @media screen and (min-width: 500px) and (max-width: 900px) {
@@ -968,6 +998,8 @@ img.hover-shadow {
   .accomodation-img-details {
     padding-left: 4rem;
     width: 40rem !important;
+    margin-left: 1rem !important;
+
   }
   .accomodation-text-details,
   .accomodation-text3-details,
@@ -1032,6 +1064,11 @@ img.hover-shadow {
     margin: 20px;
     margin-left: -4rem;
   }
+  .footer-contact-text,
+  .footer-address-text {
+    color: white;
+    font-size: 1.5rem;
+  }
 }
 /* Form  */
 .form {
@@ -1043,6 +1080,10 @@ img.hover-shadow {
   background-color: antiquewhite;
   margin-bottom: 0px !important;
   position: relative;
+ 
+}
+.formbg{
+  margin-top: 2rem;
 }
 .enquiryformSection {
   padding: 2rem;
@@ -1232,6 +1273,8 @@ img.hover-shadow {
   height: 90rem;
   background-color: #f5f2f72c;
   animation-name: jourNuit;
+  animation-duration: 45s;
+  animation-iteration-count: 1;
 }
 .soleil {
   width: 100px;
@@ -1240,9 +1283,12 @@ img.hover-shadow {
   border-radius: 50%;
   position: absolute;
   top: 70%;
-  left: 10%;
+  left: -10%;
   box-shadow: 0px 0px 52px 2px rgba(255, 170, 0, 1);
   animation-name: jour;
+  animation-delay: 0s;
+ animation-duration: 25s;
+ animation-iteration-count: 1;
   z-index: 2;
 }
 
@@ -1253,17 +1299,24 @@ img.hover-shadow {
   border-radius: 50%;
   position: absolute;
   top: 70%;
-  left: 80%;
+  left: 101%;
   box-shadow: 0px 0px 30px 0px rgba(250, 250, 250, 1);
   animation-name: nuit;
+  animation-delay: 25s;
+  animation-duration: 21s;
+   animation-iteration-count: 1;
+
   z-index: 2;
 }
 
 .etoile span {
-  color: #72627c;
+  color: transparent;
   position: absolute;
   z-index: 3;
   animation-name: etoile;
+  animation-duration: 20s;
+  animation-delay: 27s;
+  animation-iteration-count: 1;
 }
 .etoile span:first-child {
   top: 10%;
@@ -1397,14 +1450,6 @@ img.hover-shadow {
   top: 15%;
   left: 80%;
 }
-/* .terre{
-  height:2vh;
-  background-color:#b5b8b552;
-  position:relative;
-  top:170vh;
-  animation-name:verdure;
-  z-index:4;
-} */
 
 @keyframes jourNuit {
   /* 0%{background-color:transparent;}
@@ -1448,164 +1493,411 @@ img.hover-shadow {
 }
 @keyframes jour {
   0% {
-    top: 90%;
+    top: 70%;
     left: 0%;
     background-color: #f39f18;
     box-shadow: 0px 0px 52px 2px rgba(255, 170, 0, 1);
   } /*lever soleil*/
   10% {
     top: 40%;
+    left: 10%;
     background-color: #f3f990;
     box-shadow: 0px 0px 40px 18px rgba(245, 233, 95, 1);
   }
   20% {
-    top: 0%;
+    top: 30%;
+    left: 20%;
     background-color: #f3f9d2;
     box-shadow: 0px 0px 35px 8px rgba(250, 241, 147, 1);
   }
   30% {
-    top: 30%;
-    left: 50%;
+    top: 25%;
+    left: 35%;
     background-color: #f3f9d2;
     box-shadow: 0px 0px 100px 20px rgba(250, 241, 147, 1);
   }
   40% {
-    top: 50%;
+    top: 20%;
+    left:45%;
     background-color: #f3f990;
     box-shadow: 0px 0px 52px 14px rgba(245, 233, 95, 1);
   }
   50% {
-    top: 70%;
-    left: 70%;
+    top: 25%;
+    left:55%;
     background-color: #f39f18;
     box-shadow: 0px 0px 70px 2px rgba(250, 115, 42, 1);
   } /*coucher soleil*/
   60% {
-    top: 80%;
-    left: 80%;
-    box-shadow: 0px 0px 0px 0px rgba(250, 115, 42, 1);
+    top: 30%;
+    left: 65%;
+    box-shadow: 0px 0px 50px 2px rgba(250, 115, 42, 1);
   } /*début nuit*/
-  90% {
-    top: 100%;
-    left: 100%;
-    box-shadow: 0px 0px 0px 0px rgba(250, 115, 42, 1);
-  }
   100% {
-    top: 110%;
-    left: 10%;
-    background-color: #f39f18;
-    box-shadow: 0px 0px 0px 2px rgba(255, 170, 0, 1);
-  } /*fin nuit*/
+    top: 40%;
+    left: 100%;
+    box-shadow: 0px 0px 20px 0px rgba(250, 115, 42, 1);
+  }
+
 }
 
 @keyframes nuit {
-  0% {
-    top: 120%;
-    left: 120%;
-    box-shadow: 0px 0px 0px 0px rgba(250, 250, 250, 1);
-  } /*lever soleil*/
-  30% {
-    top: 120%;
-    left: 120%;
-    box-shadow: 0px 0px 0px 0px rgba(250, 250, 250, 1);
-  } /*coucher soleil*/
-  50% {
-    top: 120%;
-    left: 0%;
-    box-shadow: 0px 0px 0px 0px rgba(250, 250, 250, 1);
-  } /*coucher soleil*/
-
-  60% {
-    top: 40%;
-    box-shadow: 0px 0px 50px 5px rgba(250, 250, 250, 1);
-  } /*début nuit*/
-  70% {
-    top: -9%;
-    box-shadow: 0px 0px 30px 12px rgba(250, 250, 250, 1);
-  }
-  80% {
-    top: 30%;
-    left: 50%;
-    box-shadow: 0px 0px 100px 18px rgba(250, 250, 250, 1);
-  }
-  90% {
-    top: 50%;
-    box-shadow: 0px 0px 75px 12px rgba(250, 250, 250, 1);
-  }
-  100% {
-    top: 80%;
-    left: 80%;
-    box-shadow: 0px 0px 20px 0px rgba(250, 250, 250, 1);
-  } /*fin nuit*/
+ 0%{
+   top: 40%;
+   left: 0%;
+   box-shadow: 0px 0px 0px 0px rgba(250, 250, 250, 1);
+ }
+ 30%{
+  top: 30%;
+  left: 20%;
+  box-shadow: 0px 0px 20px 0px rgba(250, 250, 250, 1);
+ }
+40%{
+  top: 25%;
+  left: 30%;
+  box-shadow: 0px 0px 40px 0px rgba(250, 250, 250, 1);
+ }
+ 50%{
+  top: 20%;
+  left: 40%;
+  box-shadow: 0px 0px 50px 5px rgba(250, 250, 250, 1);
+ }
+ 65%{
+  top: 25%;
+  left: 60%;
+  box-shadow: 0px 0px 100px 18px rgba(250, 250, 250, 1);
+ }
+ 80%{
+  top: 30%;
+  left: 80%;
+  box-shadow: 0px 0px 75px 12px rgba(250, 250, 250, 1);
+ }
+ 100%{
+  top: 40%;
+  left:100%;
+  box-shadow: 0px 0px 20px 0px rgba(250, 250, 250, 1);
+ }
 }
-
-@keyframes verdure {
-  0% {
-    background-color: #608e69;
-  } /*lever soleil*/
-  10% {
-    background-color: #5a9d59;
-  }
-  20% {
-    background-color: #3a9d23;
-  }
-  30% {
-    background-color: #3a9d23;
-  }
-  40% {
-    background-color: #8a9323;
-  }
-  50% {
-    background-color: #585713;
-  } /*coucher soleil*/
-  60% {
-    background-color: #3d3d0d;
-  } /*début nuit*/
-  70% {
-    background-color: #071204;
-  }
-  80% {
-    background-color: #071204;
-  }
-  90% {
-    background-color: #071204;
-  }
-  100% {
-    background-color: #608e69;
-  } /*fin nuit*/
-}
+/*  */
 @keyframes etoile {
   0% {
-    color: #c0b6c5;
+    color: transparent;
   } /*lever soleil*/
   10% {
-    color: #ecd5e3;
-  }
-  20% {
     color: #cddae2;
   }
+  20% {
+    color: #d4e09b;
+  }
   30% {
-    color: #cfdeee;
+    color: #d4e09b;
   }
   40% {
-    color: #cc763f;
+    color: #dac977;
   }
   50% {
-    color: #e06632;
+    color: #e9d055;
   } /*coucher soleil*/
   60% {
-    color: #efd242;
+    color: #dfcb69;
   } /*début nuit*/
   70% {
-    color: #efe7b6;
+    color: #e9e1ad;
   }
   80% {
-    color: #efd242;
+    color: #f2da63;
   }
   90% {
     color: #efe7b6;
   }
   100% {
-    color: #463d4c;
+    color: transparent;
   } /*fin nuit*/
+}
+#canvas {
+  position: absolute;
+  width: 200%;
+  height: 137vh;
+  margin-top: -10%;
+  transform: translate(-50%, -50%);
+}
+#snow-flake-app{
+  position: absolute;
+  width: 100%;
+  height: 137vh;
+  top: 0%;
+}
+.snow {
+  position: relative;
+  background-color: #eee;
+  top: 0;
+  border-radius: 50%;
+  animation-name: snowing;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0.3;
+}
+
+.snow-flake1 {
+  width: 12px;
+  height: 12px;
+  left: 5%;
+  animation-duration: 1.5s;
+}
+.snow-flake2 {
+  width: 6px;
+  height: 6px;
+  left: 15%;
+  animation-duration: 2.75s;
+}
+.snow-flake3 {
+  width: 8px;
+  height: 8px;
+  left: 25%;
+  animation-duration: 4.5s;
+}
+.snow-flake4 {
+  width: 12px;
+  height: 12px;
+  left: 30%;
+  animation-duration: 5s;
+}
+.snow-flake5 {
+  width: 11px;
+  height: 11px;
+  left: 35%;
+  animation-duration: 2.2s;
+}
+.snow-flake6 {
+  width: 8px;
+  height: 8px;
+  left: 45%;
+  animation-duration: 1.85s;
+}
+
+.snow-flake7 {
+  width: 5px;
+  height: 5px;
+  left: 55%;
+  animation-duration: 3.5s;
+}
+.snow-flake8 {
+  width: 7px;
+  height: 7px;
+  left: 60%;
+  animation-duration: 3.75s;
+}
+.snow-flake9 {
+  width: 9px;
+  height: 9px;
+  left: 65%;
+  animation-duration: 4.5s;
+}
+.snow-flake10 {
+  width: 11px;
+  height: 11px;
+  left: 75%;
+  animation-duration: 1.75s;
+}
+
+.snow-flake11 {
+  width: 12px;
+  height: 12px;
+  left: 80%;
+  animation-duration: 2.75s;
+}
+.snow-flake12 {
+  width: 6px;
+  height: 6px;
+  left: 85%;
+  animation-duration: 3.75s;
+}
+.snow-flake13 {
+  width: 8px;
+  height: 8px;
+  left: 90%;
+  animation-duration: 4.5s;
+}
+.snow-flake14 {
+  width: 12px;
+  height: 12px;
+  left: 95%;
+  animation-duration: 1.65s;
+}
+.snow-flake15 {
+  width: 11px;
+  height: 11px;
+  left: 100%;
+  animation-duration: 2.5s;
+}
+
+@keyframes snowing {
+  100% {
+    top: 90%;
+    opacity: 0.4;
+  }
+}
+
+.snow-piles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background: #eee;
+  border-radius: 100% 100% 0 0;
+  z-index: 1;
+}
+
+.snow-pile1 {
+  width: 50%;
+  height: 75px;
+  left: 0;
+}
+.snow-pile2 {
+  width: 50%;
+  height: 100px;
+  left: 25%;
+}
+.snow-pile3 {
+  width: 50%;
+  height: 75px;
+  left: 50%;
+}
+
+
+.snowman,
+.head,
+.eyes,
+.nose,
+.snowmanbody,
+.hands,
+.buttons {
+  position: absolute;
+ 
+}
+
+.snowman {
+  bottom: 50px;
+  left: 20%;
+  background: transparent;
+  width: 200px;
+  height: 250px;
+  
+}
+
+.head {
+  z-index: 1;
+  left: 35%;
+  height: 75px;
+  width: 75px;
+  border-radius: 55% 65% 60% 70%;
+  background: white;
+}
+
+.eyes {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  top: 25%;
+  background: black;
+  animation-name: wink;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+}
+
+.left-eye {
+  left: 40%;
+}
+
+.right-eye {
+  left: 70%;
+  
+}
+
+.nose {
+  width: 50px;
+  height: 10px;
+  background: orange;
+  top: 65%;
+ right: -30%;
+  border-radius: 100% 0 0 100%;
+  transform: rotate(200deg);
+}
+
+.snowmanbody {
+  bottom: 0;
+  height: 200px;
+  width: 200px;
+  border-radius: 75% 50% 75% 75%;
+  background: white;
+}
+
+.hands {
+  height: 10px;
+  width: 100px;
+  top: 30%;
+  background: rgb(141, 132, 132);
+  /* position: relative; */
+  /* z-index: ; */
+}
+
+.left-hand {
+ 
+  border-radius: 100% 0 0 100%;
+  left: -60px;
+  top:40%;
+  transform: rotate(-20deg);
+  /* background-color: #37c3bc; */
+  /* z-index: 1; */
+ 
+}
+
+.right-hand {
+ 
+  border-radius: 0 100% 100% 0;
+  left: 80%;
+  transform: rotate(-60deg);
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+}
+
+.buttons {
+  height: 10px;
+  width: 10px;
+  background: #f00;
+  border-radius: 50%;
+}
+
+.top-button {
+  top: 25%;
+  left: 70%;
+}
+
+.middle-button {
+  top: 50%;
+  left: 70%;
+}
+
+.bottom-button {
+  top: 75%;
+  left: 65%;
+}
+
+
+@keyframes wink{
+  50%{
+transform: scale(1.5);
+   }
+}
+
+@keyframes wave{
+   50%{
+   transform: skewY(5deg);
+   }
+   75%{
+      transform: skewY(10deg);
+   }
 }
